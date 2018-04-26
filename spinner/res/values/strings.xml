@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">spinner</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string-array name="Country">
+        <item>India</item>
+        <item>Pak</item>
+        <item>China</item>
+    </string-array>
+
+</resources>

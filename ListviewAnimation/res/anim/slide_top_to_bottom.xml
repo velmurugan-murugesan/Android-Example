@@ -1,0 +1,7 @@
+<set xmlns:android="http://schemas.android.com/apk/res/android" 
+android:interpolator="@android:anim/accelerate_interpolator">
+    <translate android:fromYDelta="-100%" android:toXDelta="0" 
+        android:duration="100" />
+    <alpha android:fromAlpha="0.0" android:toAlpha="1.0" 
+        android:duration="50" />
+</set>
