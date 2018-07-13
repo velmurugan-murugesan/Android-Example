@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="#717171"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button_selected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:padding="10dp"
+        android:text="selected"
+        android:background="#7bc741"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_rejected"
+        app:layout_constraintTop_toBottomOf="@+id/swipePlaceHolder"/>
+
+    <Button
+        android:id="@+id/button_rejected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:text="Rejected"
+        android:background="#ff5252"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toStartOf="@+id/button_selected"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/swipePlaceHolder"/>
+
+    <com.mindorks.placeholderview.SwipePlaceHolderView
+        android:id="@+id/swipePlaceHolder"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </com.mindorks.placeholderview.SwipePlaceHolderView>
+</android.support.constraint.ConstraintLayout>
