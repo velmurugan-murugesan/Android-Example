@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    <com.google.android.material.chip.ChipGroup
+            android:layout_width="0dp"
+            app:singleSelection="true"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            android:id="@+id/chip_group_choice"
+            >
+
+        <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:text="Soft"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_height="wrap_content"
+                android:id="@+id/chip1"
+                />
+        <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:text="Extra Soft"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_height="wrap_content"
+                android:id="@+id/chip2"
+                />
+        <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:text="Medium"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_height="wrap_content"
+                android:id="@+id/chip3"
+                />
+        <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:text="Hard"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_height="wrap_content"
+                android:id="@+id/chip4"
+                />
+    </com.google.android.material.chip.ChipGroup>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    <TextView
+            android:text="How can i help you ?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:textStyle="bold"
+            />
+    <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            >
+        <com.google.android.material.chip.ChipGroup
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/chip_group_action"
+                android:padding="10dp"
+                app:singleLine="true"
+                app:singleSelection="true"
+                app:chipSpacingHorizontal="10dp"
+                style="@style/Widget.MaterialComponents.Chip.Action"
+                >
+            <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chip_alarm"
+                    style="@style/Widget.MaterialComponents.Chip.Action"
+                    android:text="Set Alarm"
+                    app:chipIcon="@drawable/ic_access_alarm_black_24dp"
+                    />
+            <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chip_music"
+                    android:text="Play Music"
+                    style="@style/Widget.MaterialComponents.Chip.Action"
+                    app:chipIcon="@drawable/ic_music_note_black_24dp"
+                    />
+            <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chip_call"
+                    android:text="Call to Friend"
+                    style="@style/Widget.MaterialComponents.Chip.Action"
+                    app:chipIcon="@drawable/ic_call_black_24dp"
+                    />
+            <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chip_message"
+                    android:text="Send Message"
+                    style="@style/Widget.MaterialComponents.Chip.Action"
+                    app:chipIcon="@drawable/ic_message_black_24dp"
+                    />
+        </com.google.android.material.chip.ChipGroup>
+    </HorizontalScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
