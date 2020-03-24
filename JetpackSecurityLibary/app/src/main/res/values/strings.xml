@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">JetpackSecurityLibary</string>
+    <string name="type_text_to_save">Type text to save</string>
+    <string name="save">Save</string>
+    <string name="load">Load</string>
+    <string name="get_file">Get file</string>
+    <string name="delete_file">Delete file</string>
+    <string name="decrypt_and_load">Load using Encrypted File</string>
+    <string name="value_encrypted">Value encrypted</string>
+    <string name="file_exists">File already exists!</string>
+    <string name="file_downloaded">File downloaded and encrypted</string>
+    <string name="file_deleted">File deleted!</string>
+    <string name="file_delete_error">Delete error!</string>
+    <string name="no_saved_value">No saved value!</string>
+</resources>
