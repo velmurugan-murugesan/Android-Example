@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        android:id="@+id/transition_main"
+        app:constraintSetEnd="@id/end_main"
+        app:constraintSetStart="@+id/base_main"
+        app:duration="10" >
+
+    </Transition>
+
+
+    <ConstraintSet android:id="@+id/base_main" />
+
+    <ConstraintSet android:id="@+id/end_main">
+        <Constraint android:id="@+id/recyclerviewMovies">
+            <PropertySet android:visibility="gone" />
+        </Constraint>
+
+        <Constraint android:id="@+id/animatedView">
+            <PropertySet android:visibility="visible" />
+        </Constraint>
+    </ConstraintSet>
+
+
+</MotionScene>

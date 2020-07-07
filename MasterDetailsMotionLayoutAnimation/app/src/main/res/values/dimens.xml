@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="six_grid_unit">48dp</dimen>
+    <dimen name="one_grid_unit">8dp</dimen>
+    <dimen name="two_grid_unit">16dp</dimen>
+
+    <dimen name="back_arrow_margin_start">50dp</dimen>
+</resources>

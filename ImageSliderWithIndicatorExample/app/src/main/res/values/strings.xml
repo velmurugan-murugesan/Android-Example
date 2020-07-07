@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ImageSliderWithIndicatorExample</string>
+
+    <string name="get_offer">GET OFFER</string>
+</resources>
