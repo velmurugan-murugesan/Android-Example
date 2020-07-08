@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_item_background"
+    android:layout_margin="5dp"
+    android:padding="5dp">
+    <ImageView
+        android:id="@+id/movie_poster"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:padding="10dp"
+        app:srcCompat="@mipmap/ic_launcher"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/movie_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Hello World"
+        android:paddingLeft="5dp"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@color/app_text_color"
+        app:layout_constraintLeft_toRightOf="@+id/movie_poster"
+        app:layout_constraintStart_toEndOf="@+id/movie_poster" />
+
+    <TextView
+        android:id="@+id/movie_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/sample_text"
+        android:textColor="@color/app_text_color"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/movie_poster"
+        app:layout_constraintStart_toEndOf="@+id/movie_poster"
+        app:layout_constraintTop_toBottomOf="@id/movie_title" />
+
+</android.support.constraint.ConstraintLayout>
