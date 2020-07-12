@@ -22,16 +22,16 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:26.1.0'
     //Retrofit
-    compile 'com.squareup.retrofit2:retrofit:'+rootProject.retrofit_version
-    compile 'com.squareup.retrofit2:converter-gson:'+rootProject.retrofit_version
+    implementation 'com.squareup.retrofit2:retrofit:'+rootProject.retrofit_version
+    implementation 'com.squareup.retrofit2:converter-gson:'+rootProject.retrofit_version
 
     //Glide
-    compile 'com.github.bumptech.glide:glide:'+rootProject.glide_version
+    implementation 'com.github.bumptech.glide:glide:'+rootProject.glide_version
     annotationProcessor 'com.github.bumptech.glide:compiler:'+rootProject.glide_version
 
     //Cardview
-    compile 'com.android.support:cardview-v7:'+project.android_support_lib_version
+    implementation 'com.android.support:cardview-v7:'+project.android_support_lib_version
 
     //Recyclerview
-    compile 'com.android.support:recyclerview-v7:'+project.android_support_lib_version
+    implementation 'com.android.support:recyclerview-v7:'+project.android_support_lib_version
 }
