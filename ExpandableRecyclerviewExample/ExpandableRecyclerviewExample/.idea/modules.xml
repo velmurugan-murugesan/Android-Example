@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ExpandableRecyclerviewExample.iml" filepath="$PROJECT_DIR$/ExpandableRecyclerviewExample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ExpandableRecyclerviewExample-ExpandableRecyclerviewExample.iml" filepath="$PROJECT_DIR$/.idea/modules/ExpandableRecyclerviewExample-ExpandableRecyclerviewExample.iml" group="ExpandableRecyclerviewExample" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ExpandableRecyclerviewExample-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ExpandableRecyclerviewExample-app.iml" group="ExpandableRecyclerviewExample/app" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

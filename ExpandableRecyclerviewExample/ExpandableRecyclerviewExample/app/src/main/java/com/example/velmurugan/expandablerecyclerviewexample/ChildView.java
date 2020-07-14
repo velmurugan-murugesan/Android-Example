@@ -4,6 +4,7 @@ import android.content.Context;
 import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
@@ -18,8 +19,6 @@ public class ChildView {
     @View(R.id.child_name)
     TextView textViewChild;
 
-    @View(R.id.child_desc)
-    TextView textViewDesc;
 
     @View(R.id.child_image)
     ImageView childImage;
@@ -34,8 +33,13 @@ public class ChildView {
 
     @Resolve
     private void onResolve(){
-        Log.d(TAG,"onResolve");
         textViewChild.setText(movie.getName());
-        Glide.with(mContext).load(movie.getImageUrl()).apply(RequestOptions.circleCropTransform()).into(childImage);
+        Glide.with(mContext).load(movie.getImageUrl()).into(childImage);
+        textViewChild.setOnClickListener(new android.view.View.OnClickListener() {
+            @Override
+            public void onClick(android.view.View v) {
+                Toast.makeText(mContext, movie.getName(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }

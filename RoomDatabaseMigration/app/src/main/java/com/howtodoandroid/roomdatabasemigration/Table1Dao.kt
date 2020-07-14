@@ -1,6 +1,7 @@
 package com.howtodoandroid.roomdatabasemigration
 
 import androidx.room.Dao
+import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 
@@ -9,6 +10,10 @@ interface Table1Dao {
 
     @Insert
     fun insertUser(table1: Table1)
+
+    @Delete
+    fun deleteItem(table1: Table1)
+
 
 
     @Query("Select * from table1")

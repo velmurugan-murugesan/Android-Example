@@ -3,6 +3,7 @@ package com.example.velmurugan.expandablerecyclerviewexample;
 import android.content.Context;
 import android.util.Log;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.mindorks.placeholderview.annotations.Layout;
 import com.mindorks.placeholderview.annotations.Resolve;
@@ -32,17 +33,16 @@ public class HeaderView {
 
     @Resolve
     private void onResolve(){
-        Log.d(TAG, "onResolve");
         headerText.setText(mHeaderText);
     }
 
     @Expand
     private void onExpand(){
-        Log.d(TAG, "onExpand");
+        Toast.makeText(mContext, "onExpand "+mHeaderText, Toast.LENGTH_SHORT).show();
     }
 
     @Collapse
     private void onCollapse(){
-        Log.d(TAG, "onCollapse");
+        Toast.makeText(mContext, "onCollapse "+mHeaderText, Toast.LENGTH_SHORT).show();
     }
 }

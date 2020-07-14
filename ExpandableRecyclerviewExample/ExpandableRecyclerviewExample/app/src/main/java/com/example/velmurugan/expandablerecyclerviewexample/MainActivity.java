@@ -1,11 +1,13 @@
 package com.example.velmurugan.expandablerecyclerviewexample;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import android.util.Log;
 import android.view.View.OnClickListener;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.mindorks.placeholderview.ExpandablePlaceHolderView;
 
 import java.util.ArrayList;

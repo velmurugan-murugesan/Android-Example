@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class ApiClient {
 
   private static Retrofit retrofit;
-  private static String BASE_URL="http://velmm.com/apis/";
+  private static String BASE_URL="https://howtodoandroid.com/";
 
   public static Retrofit getInstance(){
     if(retrofit == null){

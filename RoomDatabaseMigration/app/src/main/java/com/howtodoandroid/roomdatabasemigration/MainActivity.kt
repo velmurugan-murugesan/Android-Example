@@ -40,9 +40,11 @@ class MainActivity : AppCompatActivity() {
             CoroutineScope(Dispatchers.IO).launch {
                 try {
                     val db1: Table1Dao = Database1.getInstance(this@MainActivity)!!.table1Dao()
-
                     Log.d("us1", db1.fetchAll().toString())
                     Log.d("us2", db1.fetchAll2().toString())
+                    val items = db1.fetchAll();
+                    db1.deleteItem(items[0])
+                    Log.d("us1", db1.fetchAll().toString())
                 } catch (e: Exception) {
                     Log.d("Error", e.message)
                 }
