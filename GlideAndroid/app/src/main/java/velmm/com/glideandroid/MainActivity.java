@@ -12,6 +12,7 @@ import com.bumptech.glide.load.DataSource;
 import com.bumptech.glide.load.engine.GlideException;
 import com.bumptech.glide.request.RequestListener;
 
+import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.request.target.*;
 
 public class MainActivity extends AppCompatActivity {
@@ -73,10 +74,10 @@ public class MainActivity extends AppCompatActivity {
                 .apply(RequestOptions.centerCropTransform())
                 .into(imageView);*/
         //Circle crop
-        /*Glide.with(this)
+        Glide.with(this)
                 .load("imageUrl")
                 .apply(RequestOptions.circleCropTransform())
-                .into(imageView);*/
+                .into(imageView);
 
         /*Glide.with(this)
                 .load("imageUrl")

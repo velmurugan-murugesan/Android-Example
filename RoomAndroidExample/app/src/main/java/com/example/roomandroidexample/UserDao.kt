@@ -1,8 +1,6 @@
 package com.example.roomandroidexample
 
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.Query
+import androidx.room.*
 
 @Dao
 interface UserDao {
@@ -12,5 +10,11 @@ interface UserDao {
 
     @Query("Select * from user")
     fun gelAllUsers(): List<Users>
+
+    @Update
+    fun updateUser(users: Users)
+
+    @Delete
+    fun deleteUser(users: Users)
 
 }
