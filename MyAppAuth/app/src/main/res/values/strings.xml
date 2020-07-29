@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MyAppAuth</string>
+    <string name="request_failed">Request Failed</string>
+    <string name="request_complete">Request Completed</string>
 </resources>

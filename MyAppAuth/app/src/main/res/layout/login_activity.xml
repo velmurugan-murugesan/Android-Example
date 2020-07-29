@@ -1,11 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
     <Button
-            android:text="Button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:id="@+id/button_login"/>
+        android:id="@+id/button_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login" />
+
+
+    <TextView
+        android:id="@+id/textUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.AppCompat.Headline"
+        tools:text="@tools:sample/first_names"/>
+
+    <ImageView
+        android:id="@+id/imgProfile"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="20dp"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
 </LinearLayout>
