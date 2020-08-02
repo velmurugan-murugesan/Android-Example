@@ -1,4 +1,4 @@
-package com.example.velmurugan.popupapp
+package com.example.androidpopupwindowexample
 
 import android.content.Context
 import android.os.Build

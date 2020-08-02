@@ -1,4 +1,4 @@
-package com.example.velmurugan.popupapp
+package com.example.androidpopupwindowexample
 
 import android.content.Context
 import android.graphics.Color
@@ -24,12 +24,20 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        filter.setOnClickListener {
+        optionMore.setOnClickListener {
             dismissPopup()
             filterPopup = showAlertFilter()
             filterPopup?.isOutsideTouchable = true
             filterPopup?.isFocusable = true
             filterPopup?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+            filterPopup?.showAsDropDown(optionMore)
+        }
+
+        filter.setOnClickListener {
+            dismissPopup()
+            filterPopup = showAlertFilter()
+            filterPopup?.isOutsideTouchable = true
+            filterPopup?.isFocusable = true
             filterPopup?.showAsDropDown(filter)
         }
     }
@@ -64,16 +72,14 @@ class MainActivity : AppCompatActivity() {
         val inflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val view = inflater.inflate(R.layout.alter_filter_layout, null)
         val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView)
-        recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.addItemDecoration(DividerItemDecoration(recyclerView.context, DividerItemDecoration.VERTICAL))
-
         val adapter = AlertFilterAdapter(this)
         adapter.addAlertFilter(getFilterItems())
         recyclerView.adapter = adapter
         adapter.selectedItem(selectedItem)
 
-        adapter.setOnClick(object : RecyclerviewCallbacks<FilterItem>{
-            override fun onItemClick(view: View, position: Int, item:FilterItem) {
+        adapter.setOnClick(object : RecyclerviewCallbacks<FilterItem> {
+            override fun onItemClick(view: View, position: Int, item: FilterItem) {
                 selectedItem = position
                 Toast.makeText(this@MainActivity, "data = $item", Toast.LENGTH_SHORT).show()
                 dismissPopup()
