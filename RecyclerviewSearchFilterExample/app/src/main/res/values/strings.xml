@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">RecyclerviewSearchFilter Example</string>
+    <string name="action_search">search</string>
+</resources>
