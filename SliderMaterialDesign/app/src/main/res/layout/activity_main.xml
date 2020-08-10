@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textContinuousSlider"
+        android:text="Continuous Slider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        style="@style/TextAppearance.MaterialComponents.Body1"
+        android:layout_margin="40dp"/>
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/continuousSlider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textContinuousSlider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="10dp"
+        android:valueFrom="0.0"
+        android:valueTo="100.0"
+        android:value="20.0"
+        app:labelBehavior="floating"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textDiscreteSlider"
+        android:text="Discrete Slider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/continuousSlider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        style="@style/TextAppearance.MaterialComponents.Body1"
+        android:layout_margin="40dp"/>
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/discreteSlider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textDiscreteSlider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="10dp"
+        android:valueFrom="0.0"
+        android:valueTo="100.0"
+        android:stepSize="10.0"
+        app:labelBehavior="withinBounds"
+        android:value="30.0"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textRangeSlider"
+        android:text="Range Slider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/discreteSlider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        style="@style/TextAppearance.MaterialComponents.Body1"
+        android:layout_margin="40dp"/>
+
+    <com.google.android.material.slider.RangeSlider
+        android:id="@+id/rangeSlider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textRangeSlider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="10dp"
+        android:valueFrom="0.0"
+        android:valueTo="100.0"
+        app:values="@array/initial_range_slider_values"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
