@@ -1,0 +1,12 @@
+<resources>
+  <string name="app_name">ConstraintLayout Android Example</string>
+  <string name="username">Username</string>
+  <string name="password">Password</string>
+  <string name="login">Login</string>
+  <string name="email">Email</string>
+  <string name="register">Register</string>
+  <string name="login_error_message">Invalid Login Credentials</string>
+  <string name="login_success_message">Login Successful</string>
+  <string name="register_success_message">Register Success</string>
+  <string name="register_error_message">Please Provide Valid Details</string>
+</resources>
