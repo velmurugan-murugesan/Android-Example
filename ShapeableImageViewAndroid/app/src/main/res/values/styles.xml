@@ -1,0 +1,85 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.CornerSize10Percent" parent="">
+        <item name="cornerSize">10%</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.CornerCut" parent="">
+        <item name="cornerSize">15dp</item>
+        <item name="cornerFamily">cut</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.CornerCut50Percent" parent="">
+        <item name="cornerSize">75dp</item>
+        <item name="cornerFamily">cut</item>
+    </style>
+    <style name="ShapeAppearanceOverlay.App.SelectedCornerRadius" parent="">
+        <item name="cornerSizeTopRight">75dp</item>
+        <item name="cornerFamilyTopRight">rounded</item>
+        <item name="cornerSizeBottomLeft">75dp</item>
+        <item name="cornerFamilyBottomLeft">rounded</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.SelectedCornerCut" parent="">
+        <item name="cornerSizeTopRight">75dp</item>
+        <item name="cornerFamilyTopRight">cut</item>
+        <item name="cornerSizeBottomLeft">75dp</item>
+        <item name="cornerFamilyBottomLeft">cut</item>
+    </style>
+   <!-- <style name="Widget.App.ShapeableImageViewCircleNoStroke" parent="Widget.MaterialComponents.ShapeableImageView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.App.CornerSize50Percent
+        </item>
+    </style>
+
+    <style name="Widget.App.ShapeableImageViewCircleWithStroke" parent="Widget.MaterialComponents.ShapeableImageView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.App.CornerSize50Percent
+        </item>
+        <item name="strokeWidth">10dp</item>
+        <item name="cornerSize">20dp</item>
+        <item name="strokeColor">@android:color/darker_gray</item>
+    </style>
+
+    <style name="Widget.App.ShapeableImageViewCornerRadiusNoStroke" parent="Widget.MaterialComponents.ShapeableImageView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.App.CornerSize10Percent
+        </item>
+    </style>
+    <style name="Widget.App.ShapeableImageViewCornerRadius" parent="Widget.MaterialComponents.ShapeableImageView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.App.CornerSize10Percent
+        </item>
+        <item name="strokeWidth">@dimen/strokeSize</item>
+        <item name="strokeColor">@android:color/darker_gray</item>
+    </style>
+
+    <style name="Widget.App.ShapeableImageViewCornerCut1" parent="Widget.MaterialComponents.ShapeableImageView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.App.CornerCut1
+        </item>
+    </style>
+
+    <style name="Widget.App.ShapeableImageViewCornerCut2" parent="Widget.MaterialComponents.ShapeableImageView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.App.CornerCut2
+        </item>
+    </style>
+
+    <style name="Widget.App.ShapeableImageViewSelectedCorner1" parent="Widget.MaterialComponents.ShapeableImageView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.App.SelectedCorner1
+        </item>
+    </style>
+
+    <style name="Widget.App.ShapeableImageViewSelectedCorner2" parent="Widget.MaterialComponents.ShapeableImageView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.App.SelectedCorner2
+        </item>
+    </style>-->
+
+</resources>
