@@ -27,7 +27,11 @@ public class MainActivity extends AppCompatActivity {
         } catch (Exception e){
             e.printStackTrace();
         }
+
+        
     }
+
+
 
     public void getLocation(View view){
         gpsTracker = new GpsTracker(MainActivity.this);

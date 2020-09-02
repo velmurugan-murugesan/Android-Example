@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Android-Example-GetCurrentLatitudeAndLongitudeAndroid.iml" filepath="$PROJECT_DIR$/.idea/modules/Android-Example-GetCurrentLatitudeAndLongitudeAndroid.iml" group="GetCurrentLatitudeAndLongitudeAndroid" />
       <module fileurl="file://$PROJECT_DIR$/GetCurrentLatitudeAndLongitudeAndroid.iml" filepath="$PROJECT_DIR$/GetCurrentLatitudeAndLongitudeAndroid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/GetCurrentLatitudeAndLongitudeAndroid-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/GetCurrentLatitudeAndLongitudeAndroid-app.iml" group="GetCurrentLatitudeAndLongitudeAndroid/app" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
