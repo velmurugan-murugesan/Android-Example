@@ -1,0 +1,9 @@
+syntax = "proto3";
+package tutorial;
+
+option java_package = "com.example.datastorejetpack";
+option java_multiple_files = true;
+
+message Profile {
+  string username = 1;
+}
