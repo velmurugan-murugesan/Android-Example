@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:orientation="vertical"
+    android:id="@+id/parentLayout"
+    tools:context=".MainActivity">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Circular indicator"
+        android:layout_marginBottom="8dp"/>
+    <com.google.android.material.progressindicator.ProgressIndicator
+        android:id="@+id/progressCircleDeterminate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:progress="70"
+        app:trackColor="@color/colorAccent"
+        app:indicatorColor="@color/colorPrimary"
+        app:indicatorWidth="10dp"
+        style="@style/Widget.MaterialComponents.ProgressIndicator.Circular.Determinate"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Linear indicator"
+        android:layout_marginBottom="8dp"/>
+    <com.google.android.material.progressindicator.ProgressIndicator
+        android:id="@+id/progressLinearDeterminate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:progress="70"
+        app:trackColor="@color/colorAccent"
+        app:indicatorColor="@color/colorPrimary"
+        app:indicatorWidth="10dp"
+        style="@style/Widget.MaterialComponents.ProgressIndicator.Linear.Determinate"/>
+
+    <!--
+
+
+       <androidx.appcompat.widget.AppCompatTextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:gravity="center"
+          android:text="Progress Circle Determinate"
+           android:layout_marginBottom="8dp"/>
+
+
+       <com.google.android.material.progressindicator.ProgressIndicator
+           android:id="@+id/progressCircleDeterminate"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:progress="70"
+           style="@style/Widget.MaterialComponents.ProgressIndicator.Circular.Determinate"/>
+
+       <androidx.appcompat.widget.AppCompatTextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:gravity="center"
+           android:text="Progress Circle Indeterminate"
+           android:layout_marginBottom="8dp"/>
+       <com.google.android.material.progressindicator.ProgressIndicator
+           android:id="@+id/progressCircleIndeterminate"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:visibility="visible"
+           style="@style/Widget.MaterialComponents.ProgressIndicator.Circular.Indeterminate"/>
+
+       <androidx.appcompat.widget.AppCompatTextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:gravity="center"
+           android:text="Progress Linear Indeterminate"
+           android:layout_marginBottom="8dp"/>
+       <com.google.android.material.progressindicator.ProgressIndicator
+           android:id="@+id/progressLinearIndeterminate"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:progress="50"
+           android:visibility="visible"
+           style="@style/Widget.MaterialComponents.ProgressIndicator.Linear.Indeterminate"/>
+       <androidx.appcompat.widget.AppCompatTextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:gravity="center"
+           android:text="Progress Linear Indeterminate"
+           android:layout_marginBottom="8dp"/>
+       <com.google.android.material.progressindicator.ProgressIndicator
+           android:id="@+id/progressLinearDeterminate"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:progress="50"
+           android:visibility="visible"
+           style="@style/Widget.MaterialComponents.ProgressIndicator.Linear.Determinate"/>
+    -->
+
+</LinearLayout>
