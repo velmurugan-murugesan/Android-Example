@@ -60,6 +60,8 @@ class MainActivity : AppCompatActivity() {
                             "com.example.captureimage.fileprovider",
                             photoFile!!
                         )
+                        takePictureIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+
                         takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI)
                         startActivityForResult(takePictureIntent, CAPTURE_IMAGE_REQUEST)
                     }
