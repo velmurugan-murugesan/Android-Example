@@ -13,3 +13,9 @@ This repository contains example project listed in howtodoandroid.com. Please ch
 - [Implementing Pagination With Recyclerview](https://howtodoandroid.com/pagination-with-recyclerview/)
 - [Multiple Resource Folders In Android](https://howtodoandroid.com/multiple-resource-folders-android/)
 - [Android Capture Image From Camera Programmatically [Updated]](https://howtodoandroid.com/capture-image-android/)
+
+## How to find me
+- [Medium articles](https://medium.com/@howtodoandroid)
+- [LinkedIn](https://www.linkedin.com/in/velmurugan-m/)
+- [howtodoandroid.com](http://howtodoandroid.com/)
+- [Twitter](https://twitter.com/HowtodoandroidC)
