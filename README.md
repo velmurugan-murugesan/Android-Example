@@ -1,5 +1,5 @@
 # Howtodoandroid.com Android Examples
-<img src = "images/bottom%20poster.png" width=1200 height=200>
+<img src = "images/bottom%20poster.png" width=1200 height=175>
 This repository contains example project listed in howtodoandroid.com. Please check my website for the detail explanation.
 
 ## Android Examples included
