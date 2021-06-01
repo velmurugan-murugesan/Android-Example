@@ -1,5 +1,5 @@
 # Howtodoandroid.com Android Examples
-
+<img src = "images/bottom%20poster.png" width=1200 height=200>
 This repository contains example project listed in howtodoandroid.com. Please check my website for the detail explanation.
 
 ## Android Examples included
@@ -13,4 +13,3 @@ This repository contains example project listed in howtodoandroid.com. Please ch
 - [Implementing Pagination With Recyclerview](https://howtodoandroid.com/pagination-with-recyclerview/)
 - [Multiple Resource Folders In Android](https://howtodoandroid.com/multiple-resource-folders-android/)
 - [Android Capture Image From Camera Programmatically [Updated]](https://howtodoandroid.com/capture-image-android/)
-<img src = “images/bottom_poster.png” width=1200 height=200>
