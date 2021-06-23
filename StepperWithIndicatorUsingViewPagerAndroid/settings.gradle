@@ -1,0 +1,3 @@
+include ':stepper_indicator'
+include ':app'
+rootProject.name = "Stepper With Indicator Using ViewPager Android"
