@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/inbox"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_inbox_24"
+        android:title="Inbox"/>
+    <item
+        android:id="@+id/sent"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_send_24"
+        android:title="Sent"/>
+    <item
+        android:id="@+id/draft"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_drafts_24"
+        android:title="Draft"/>
+    <item
+        android:id="@+id/trash"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_restore_from_trash_24"
+        android:title="Trash"/>
+</menu>

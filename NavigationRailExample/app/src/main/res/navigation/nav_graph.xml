@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/inboxFragment">
+
+    <fragment
+        android:id="@+id/inboxFragment"
+        android:name="com.example.navigationrailexample.InboxFragment"
+        android:label="InboxFragment" >
+        <action
+            android:id="@+id/action_inboxFragment_to_trashFragment"
+            app:destination="@id/trashFragment" />
+        <action
+            android:id="@+id/action_inboxFragment_to_sentFragment"
+            app:destination="@id/sentFragment" />
+        <action
+            android:id="@+id/action_inboxFragment_to_draftFragment"
+            app:destination="@id/draftFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sentFragment"
+        android:name="com.example.navigationrailexample.SentFragment"
+        android:label="SentFragment" />
+    <fragment
+        android:id="@+id/draftFragment"
+        android:name="com.example.navigationrailexample.DraftFragment"
+        android:label="DraftFragment" />
+    <fragment
+        android:id="@+id/trashFragment"
+        android:name="com.example.navigationrailexample.TrashFragment"
+        android:label="TrashFragment" />
+</navigation>

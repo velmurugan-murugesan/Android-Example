@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="4dp"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="8dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/profileIcon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/ic_baseline_account_circle_24"
+            android:tint="@color/black_light"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textFrom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            tools:text="@tools:sample/full_names"
+            android:textStyle="bold"
+            android:textColor="@color/black_light"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:layout_constraintStart_toEndOf="@id/profileIcon"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textSubject"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/textFrom"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="4dp"
+            tools:text="@tools:sample/full_names"
+            android:textStyle="bold"
+            android:textColor="@android:color/darker_gray"
+            android:maxLines="2"
+            android:ellipsize="marquee"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:layout_constraintStart_toEndOf="@id/profileIcon"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
