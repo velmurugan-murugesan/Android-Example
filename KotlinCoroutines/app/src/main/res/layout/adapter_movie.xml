@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="@tools:sample/backgrounds/scenic"
+        android:scaleType="centerCrop"
+        android:layout_margin="8dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        app:layout_constraintStart_toEndOf="@id/image"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@tools:sample/full_names"
+        android:layout_margin="8dp"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textCategory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        app:layout_constraintStart_toEndOf="@id/image"
+        app:layout_constraintTop_toBottomOf="@+id/textTitle"
+        tools:text="@tools:sample/full_names"
+        android:layout_margin="8dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintStart_toEndOf="@id/image"
+        app:layout_constraintTop_toBottomOf="@+id/textCategory"
+        tools:text="@tools:sample/full_names"
+        android:lines="2"
+        android:maxLines="2"
+        android:layout_margin="8dp"/>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#636363"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textDesc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="12dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
