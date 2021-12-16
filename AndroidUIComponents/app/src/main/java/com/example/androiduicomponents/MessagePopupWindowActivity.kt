@@ -14,7 +14,6 @@ import androidx.core.content.ContextCompat
 
 class MessagePopupWindowActivity : AppCompatActivity() {
 
-
     private var popupWindow: PopupWindow? = null
     private val popupWindowView: View by lazy {
         layoutInflater.inflate(R.layout.layout_message_popup_window, null)
