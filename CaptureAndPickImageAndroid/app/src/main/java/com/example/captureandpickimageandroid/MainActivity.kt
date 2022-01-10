@@ -59,6 +59,7 @@ class MainActivity : AppCompatActivity() {
                 if (result.resultCode == Activity.RESULT_OK) {
                     val data: Intent? = result.data
                     //If multiple image selected
+
                     if (data?.clipData != null) {
                         val count = data.clipData?.itemCount ?: 0
 
@@ -101,6 +102,7 @@ class MainActivity : AppCompatActivity() {
 
         }
         checkCameraPermission()
+
     }
 
     private fun getImageFromUri(imageUri: Uri?) : File? {

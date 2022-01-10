@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Github/Android-Example/AndroidUIComponents/app/src/main/res/layout/activity_message_popup_window.xml" value="0.25416666666666665" />
+        <entry key="..\:/Github/Android-Example/AndroidUIComponents/app/src/main/res/layout/layout_message_popup_window.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/velmu/AndroidStudioProjects/AndroidUIComponents/app/src/main/res/drawable/button_selector.xml" value="0.3769230769230769" />
         <entry key="..\:/Users/velmu/AndroidStudioProjects/AndroidUIComponents/app/src/main/res/layout/activity_button_state.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/velmu/AndroidStudioProjects/AndroidUIComponents/app/src/main/res/layout/activity_error_popup_window.xml" value="0.24583333333333332" />
