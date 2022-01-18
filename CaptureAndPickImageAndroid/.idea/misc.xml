@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Github/Android-Example/CaptureAndPickImageAndroid/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Github/Android-Example/CaptureAndPickImageAndroid/app/src/main/res/layout/layout_image_adapter.xml" value="0.26875" />
         <entry key="..\:/Users/velmu/AndroidStudioProjects/CaptureAndPickImageAndroid/app/src/main/res/layout/activity_main.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/velmu/AndroidStudioProjects/CaptureAndPickImageAndroid/app/src/main/res/layout/layout_image_adapter.xml" value="0.25416666666666665" />
       </map>

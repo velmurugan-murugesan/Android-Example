@@ -1,37 +1,27 @@
 package com.example.captureandpickimageandroid
 
-import android.Manifest
 import android.app.Activity
+import android.content.ContentResolver
 import android.content.Context
 import android.content.Intent
 import android.content.Intent.ACTION_GET_CONTENT
-import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
-import android.provider.MediaStore
 import android.util.Log
+import android.webkit.MimeTypeMap
 import android.widget.Button
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import org.apache.commons.io.FileUtils
 import java.io.File
-import android.webkit.MimeTypeMap
-
-import android.content.ContentResolver
-import android.provider.MediaStore.Images
-
-import android.graphics.Bitmap
 
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var btnCaptureImage: Button
     lateinit var btnSelectImages: Button
     lateinit var rvImages: RecyclerView
 
-    private val cameraPermissionCode = 201
-    private val cameraCaptureRequest = 301
     lateinit var imageAdapter: ImageAdapter
     var selectedPaths = mutableListOf<String>()
 
@@ -40,26 +30,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        btnCaptureImage = findViewById(R.id.btnCaptureImage)
         btnSelectImages = findViewById(R.id.btnSelectImages)
         rvImages = findViewById(R.id.rvImages)
         imageAdapter = ImageAdapter()
         rvImages.adapter = imageAdapter
 
-        val captureImageActivityResult =
-            registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
-                if (result.resultCode == Activity.RESULT_OK) {
-                    val data: Intent? = result.data
-
-                }
-            }
 
         val selectImagesActivityResult =
             registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
                 if (result.resultCode == Activity.RESULT_OK) {
                     val data: Intent? = result.data
                     //If multiple image selected
-
                     if (data?.clipData != null) {
                         val count = data.clipData?.itemCount ?: 0
 
@@ -84,11 +65,6 @@ class MainActivity : AppCompatActivity() {
                 }
             }
 
-        btnCaptureImage.setOnClickListener {
-            val cameraIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-            captureImageActivityResult.launch(cameraIntent)
-        }
-
         btnSelectImages.setOnClickListener {
 
             val intent = Intent(ACTION_GET_CONTENT)
@@ -101,7 +77,6 @@ class MainActivity : AppCompatActivity() {
         } catch (e: Exception) {
 
         }
-        checkCameraPermission()
 
     }
 
@@ -158,13 +133,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
         return file.delete()
-    }
-
-
-    private fun checkCameraPermission() {
-        if (checkSelfPermission(Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
-            requestPermissions(arrayOf(Manifest.permission.CAMERA), cameraPermissionCode)
-        }
     }
 
 }

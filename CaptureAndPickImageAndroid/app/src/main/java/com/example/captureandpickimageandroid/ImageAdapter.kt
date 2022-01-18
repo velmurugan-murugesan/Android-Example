@@ -20,7 +20,7 @@ class ImageAdapter : RecyclerView.Adapter<ImageViewHolder>() {
     override fun onBindViewHolder(holder: ImageViewHolder, position: Int) {
         val imagePath = selectedImagePath[position]
         holder.image.setImageBitmap(BitmapFactory.decodeFile(imagePath))
-        holder.filename.text = imagePath
+        holder.filename.text = imagePath.split("/").last().toString()
     }
 
     override fun getItemCount(): Int {
