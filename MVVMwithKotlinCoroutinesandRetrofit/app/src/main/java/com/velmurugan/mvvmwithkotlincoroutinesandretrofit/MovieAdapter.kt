@@ -25,8 +25,10 @@ class MovieAdapter : RecyclerView.Adapter<MainViewHolder>() {
     override fun onBindViewHolder(holder: MainViewHolder, position: Int) {
 
         val movie = movieList[position]
-        holder.binding.name.text = movie.name
-        Glide.with(holder.itemView.context).load(movie.imageUrl).into(holder.binding.imageview)
+        if (ValidationUtil.validateMovie(movie)) {
+            holder.binding.name.text = movie.name
+            Glide.with(holder.itemView.context).load(movie.imageUrl).into(holder.binding.imageview)
+        }
     }
 
     override fun getItemCount(): Int {

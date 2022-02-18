@@ -22,9 +22,10 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         tools:listitem="@layout/adapter_movie"
-        tools:itemCount="5"
+        tools:itemCount="10"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"
         app:layout_constraintStart_toStartOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

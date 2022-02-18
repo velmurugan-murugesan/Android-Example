@@ -9,13 +9,15 @@ class MainViewModel constructor(private val mainRepository: MainRepository) : Vi
     val errorMessage = MutableLiveData<String>()
     val movieList = MutableLiveData<List<Movie>>()
     var job: Job? = null
-    val exceptionHandler = CoroutineExceptionHandler { _, throwable ->
+    private val exceptionHandler = CoroutineExceptionHandler { _, throwable ->
         onError("Exception handled: ${throwable.localizedMessage}")
     }
     val loading = MutableLiveData<Boolean>()
 
     fun getAllMovies() {
+
         job = CoroutineScope(Dispatchers.IO + exceptionHandler).launch {
+            loading.postValue(true)
             val response = mainRepository.getAllMovies()
             withContext(Dispatchers.Main) {
                 if (response.isSuccessful) {

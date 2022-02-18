@@ -37,6 +37,10 @@ android {
         viewBinding = true
     }
 
+    packagingOptions {
+        exclude 'META-INF/*'
+    }
+
 }
 
 dependencies {
@@ -49,7 +53,11 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-
+    testImplementation 'org.mockito:mockito-core:2.28.2'
+    androidTestImplementation 'org.mockito:mockito-android:2.24.5'
+    implementation 'androidx.arch.core:core-testing:2.0.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.5.0'
+    testImplementation 'com.squareup.okhttp3:mockwebserver:4.9.0'
     // Networking
     implementation "com.squareup.retrofit2:retrofit:2.9.0"
     implementation "com.squareup.okhttp3:okhttp:4.7.2"
@@ -67,4 +75,6 @@ dependencies {
     //Glide
     implementation 'com.github.bumptech.glide:glide:4.12.0'
     kapt 'com.github.bumptech.glide:compiler:4.12.0'
+    testImplementation 'com.squareup.okhttp3:mockwebserver:4.9.0'
+
 }
