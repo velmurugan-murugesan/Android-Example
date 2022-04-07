@@ -24,13 +24,13 @@ class MainActivity : AppCompatActivity() {
         viewModel = ViewModelProvider(this, MyViewModelFactory(mainRepository)).get(MainViewModel::class.java)
 
 
-        viewModel.movieList.observe(this, {
+        viewModel.movieList.observe(this) {
             adapter.setMovies(it)
-        })
+        }
 
-        viewModel.errorMessage.observe(this, {
+        viewModel.errorMessage.observe(this) {
             Toast.makeText(this, it, Toast.LENGTH_SHORT).show()
-        })
+        }
 
         viewModel.loading.observe(this, Observer {
             if (it) {
