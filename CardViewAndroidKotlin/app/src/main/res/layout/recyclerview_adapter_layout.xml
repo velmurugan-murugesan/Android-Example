@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:cardView="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/carView"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    cardView:cardCornerRadius="8dp"
+    cardView:cardElevation="8dp"
+    android:layout_margin="8dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/image"
+            android:scaleType="centerCrop"
+            tools:background="@tools:sample/backgrounds/scenic"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            cardView:layout_constraintStart_toStartOf="parent"
+            cardView:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-smallcaps"
+            android:gravity="center_vertical"
+            android:layout_margin="8dp"
+            cardView:layout_constraintTop_toTopOf="parent"
+            cardView:layout_constraintLeft_toRightOf="@id/image"
+            cardView:layout_constraintRight_toRightOf="parent"
+            android:lines="1"
+            android:padding="5dp"
+            android:textStyle="bold"
+            tools:text="@tools:sample/full_names"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@android:color/black" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textRating"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            cardView:layout_constraintTop_toBottomOf="@id/title"
+            cardView:layout_constraintStart_toStartOf="@id/title"
+            tools:text="Rating : 9.5"
+            android:layout_marginTop="4dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
