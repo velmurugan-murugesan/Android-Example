@@ -25,7 +25,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="TextView"
+        tools:text="@tools:sample/full_names"
         android:textStyle="bold"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/alert_filter_icon"
@@ -39,6 +39,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
+        android:visibility="gone"
         android:background="@drawable/ic_check_black_24dp"
         app:layout_constraintStart_toEndOf="@+id/alert_filter_name"
         app:layout_constraintTop_toTopOf="parent" />

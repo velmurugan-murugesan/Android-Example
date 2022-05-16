@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/NavigationdrawerExample.iml" filepath="$PROJECT_DIR$/.idea/modules/NavigationdrawerExample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/NavigationdrawerExample.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/NavigationdrawerExample.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/NavigationdrawerExample.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/NavigationdrawerExample.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/NavigationdrawerExample.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/NavigationdrawerExample.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/NavigationdrawerExample.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/NavigationdrawerExample.app.unitTest.iml" />
+    </modules>
+  </component>
+</project>
