@@ -14,6 +14,7 @@ import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
 import org.mockito.Mock
 import org.mockito.Mockito
+import org.mockito.Mockito.mock
 import org.mockito.MockitoAnnotations
 import retrofit2.Response
 
@@ -24,6 +25,7 @@ class MainViewModelTest {
 
     private val testDispatcher = TestCoroutineDispatcher()
     lateinit var mainViewModel: MainViewModel
+
     lateinit var mainRepository: MainRepository
 
     @Mock
@@ -36,7 +38,7 @@ class MainViewModelTest {
     fun setup() {
         MockitoAnnotations.initMocks(this)
         Dispatchers.setMain(testDispatcher)
-        mainRepository = MainRepository(apiService)
+        mainRepository = mock(MainRepository::class.java)
         mainViewModel = MainViewModel(mainRepository)
     }
 
@@ -44,7 +46,7 @@ class MainViewModelTest {
     fun getAllMoviesTest() {
         runBlocking {
             Mockito.`when`(mainRepository.getAllMovies())
-                .thenReturn(Response.success(listOf<Movie>(Movie("movie", "", "new"))))
+                .thenReturn(NetworkState.Success(listOf<Movie>(Movie("movie", "", "new"))))
             mainViewModel.getAllMovies()
             val result = mainViewModel.movieList.getOrAwaitValue()
             assertEquals(listOf<Movie>(Movie("movie", "", "new")), result)
@@ -56,7 +58,7 @@ class MainViewModelTest {
     fun `empty movie list test`() {
         runBlocking {
             Mockito.`when`(mainRepository.getAllMovies())
-                .thenReturn(Response.success(listOf<Movie>()))
+                .thenReturn(NetworkState.Success(listOf<Movie>()))
             mainViewModel.getAllMovies()
             val result = mainViewModel.movieList.getOrAwaitValue()
             assertEquals(listOf<Movie>(), result)

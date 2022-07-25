@@ -33,12 +33,29 @@
         app:labelBehavior="floating"
         />
 
+    <com.google.android.material.slider.Slider
+        android:id="@+id/continuousSlider2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/continuousSlider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:valueFrom="0.0"
+        android:valueTo="100.0"
+        android:value="20.0"
+        app:labelBehavior="floating"
+        />
+
+
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textDiscreteSlider"
         android:text="Discrete Slider"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/continuousSlider"
+        app:layout_constraintTop_toBottomOf="@+id/continuousSlider2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:gravity="center"

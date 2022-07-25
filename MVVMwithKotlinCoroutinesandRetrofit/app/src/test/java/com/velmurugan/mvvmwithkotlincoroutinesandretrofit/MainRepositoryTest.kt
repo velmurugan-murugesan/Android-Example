@@ -30,7 +30,7 @@ class MainRepositoryTest {
         runBlocking {
             Mockito.`when`(apiService.getAllMovies()).thenReturn(Response.success(listOf<Movie>()))
             val response = mainRepository.getAllMovies()
-            assertEquals(listOf<Movie>(), response.body())
+            assertEquals(listOf<Movie>(),  NetworkState.Success(response).data)
         }
 
     }

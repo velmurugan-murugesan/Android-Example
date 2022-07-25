@@ -3,7 +3,6 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="sliderStyle">@style/Widget.App.Slider</item>
     </style>
 
     <style name="Widget.App.Slider" parent="Widget.MaterialComponents.Slider">
