@@ -15,14 +15,5 @@ fun Context.createImageFile(): File {
         ".jpg", /* suffix */
         externalCacheDir      /* directory */
     )
-    // Save a file: path for use with ACTION_VIEW intents
-    //mCurrentPhotoPath = image.absolutePath
     return image
-}
-
-
-fun Context.getFile(uri: Uri) : File {
-    val path = uri.path?.replace("/my_images","")
-
-    return File(externalCacheDir,path)
 }

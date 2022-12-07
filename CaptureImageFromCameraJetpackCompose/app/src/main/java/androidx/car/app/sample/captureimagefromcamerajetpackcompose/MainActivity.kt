@@ -4,11 +4,11 @@ import android.Manifest
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.compose.setContent
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
@@ -17,9 +17,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.car.app.sample.captureimagefromcamerajetpackcompose.ui.theme.CaptureImageFromCameraJetpackComposeTheme
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.*
 import androidx.compose.material.Button
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -42,22 +40,8 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-
-                    val context = LocalContext.current
-
                     AppContent()
                     //check permission
-                    val permissionStatus = ContextCompat.checkSelfPermission(
-                        context,
-                        Manifest.permission.CAMERA
-                    )
-                    if(permissionStatus != PackageManager.PERMISSION_GRANTED) {
-                        rememberLauncherForActivityResult(
-                            ActivityResultContracts.RequestPermission()
-                        ) {
-                        }.launch(Manifest.permission.CAMERA)
-                    }
-
                 }
             }
         }
@@ -79,10 +63,21 @@ fun AppContent() {
         mutableStateOf<Uri>(Uri.EMPTY)
     }
 
-    val launcher =
+    val cameraLauncher =
         rememberLauncherForActivityResult(ActivityResultContracts.TakePicture()) {
             capturedImageUri = uri
         }
+
+    val permissionLauncher = rememberLauncherForActivityResult(
+        ActivityResultContracts.RequestPermission()
+    ) {
+        if (it) {
+            Toast.makeText(context, "Permission Granted", Toast.LENGTH_SHORT).show()
+            cameraLauncher.launch(uri)
+        } else {
+            Toast.makeText(context, "Permission Denied", Toast.LENGTH_SHORT).show()
+        }
+    }
 
     Column(
         Modifier
@@ -91,7 +86,14 @@ fun AppContent() {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Button(onClick = {
-            launcher.launch(uri)
+            val permissionCheckResult =
+                ContextCompat.checkSelfPermission(context, Manifest.permission.CAMERA)
+            if (permissionCheckResult == PackageManager.PERMISSION_GRANTED) {
+                cameraLauncher.launch(uri)
+            } else {
+                // Request a permission
+                permissionLauncher.launch(Manifest.permission.CAMERA)
+            }
         }) {
             Text(text = "Capture Image From Camera")
         }
@@ -100,16 +102,11 @@ fun AppContent() {
     if (capturedImageUri.path?.isNotEmpty() == true) {
         Image(
             modifier = Modifier
-                .padding(16.dp, 8.dp)
-                .size(100.dp),
+                .padding(16.dp, 8.dp),
             painter = rememberImagePainter(capturedImageUri),
             contentDescription = null
         )
     }
-
-
-
-
 
 }
 
