@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FlexDirectionActivity">
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/flexLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="12dp"
+        app:flexWrap="wrap"
+        app:layout_constraintBottom_toTopOf="@+id/layoutActions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:padding="8dp"
+            app:chipStrokeWidth="2dp"
+            app:chipStrokeColor="@color/purple_200"
+            android:backgroundTint="@color/white"
+            android:text="Material Design" />
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:padding="8dp"
+            app:chipStrokeWidth="2dp"
+            app:chipStrokeColor="@color/purple_200"
+            android:backgroundTint="@color/white"
+            android:text="Android" />
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:padding="8dp"
+            app:chipStrokeWidth="2dp"
+            app:chipStrokeColor="@color/purple_200"
+            android:backgroundTint="@color/white"
+            android:text="Recyclerview" />
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:padding="8dp"
+            app:chipStrokeWidth="2dp"
+            app:chipStrokeColor="@color/purple_200"
+            android:backgroundTint="@color/white"
+            android:text="MVVM" />
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:padding="8dp"
+            app:chipStrokeWidth="2dp"
+            app:chipStrokeColor="@color/purple_200"
+            android:backgroundTint="@color/white"
+            android:text="Room Database" />
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:padding="8dp"
+            app:chipStrokeWidth="2dp"
+            app:chipStrokeColor="@color/purple_200"
+            android:backgroundTint="@color/white"
+            android:text="Jetpack Compose" />
+    </com.google.android.flexbox.FlexboxLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/layoutActions"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@color/teal_200"
+        android:padding="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/actionNoWrap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Wrap"
+            android:backgroundTint="@color/action_selector"
+            android:textColor="@color/white"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/actionWrap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wrap"
+            android:backgroundTint="@color/action_selector"
+            android:textColor="@color/white"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/actionWrapReverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wrap Reverse"
+            android:backgroundTint="@color/action_selector"
+            android:textColor="@color/white"
+            />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
