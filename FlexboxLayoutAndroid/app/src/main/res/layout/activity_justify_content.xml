@@ -77,7 +77,18 @@
             app:chipStrokeColor="@color/purple_200"
             android:backgroundTint="@color/white"
             android:text="Jetpack Compose" />
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:padding="8dp"
+            app:chipStrokeWidth="2dp"
+            app:chipStrokeColor="@color/purple_200"
+            android:backgroundTint="@color/white"
+            android:text="Kotlin" />
     </com.google.android.flexbox.FlexboxLayout>
+
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/layoutActions"
@@ -88,7 +99,7 @@
         android:background="@color/teal_200"
         android:padding="8dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/layoutActions2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
@@ -119,6 +130,20 @@
             android:textColor="@color/white"
             />
 
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/layoutActions2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@color/teal_200"
+        android:padding="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/actionSpaceBetween"
             android:layout_width="wrap_content"
