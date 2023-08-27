@@ -1,8 +1,10 @@
 package com.velmurugan.hiltandroid
 
 import android.content.Context
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.velmurugan.hiltandroid.data.MainRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ActivityContext
@@ -20,11 +22,15 @@ class MainViewModel @Inject constructor(private val mainRepository: MainReposito
 
     fun fetchAllMovies() {
         progressBarStatus.value = true
-        CoroutineScope(Dispatchers.IO).launch {
-            val response = mainRepository.getAllMovies()
-            if (response.isSuccessful) {
-                movieList.postValue(response.body())
+        viewModelScope.launch {
+            kotlin.runCatching {
+                mainRepository.getAllMovies()
+            }.onSuccess {
+                movieList.postValue(it.body())
+            }.onFailure {
+
             }
+
         }
         progressBarStatus.value = false
     }
