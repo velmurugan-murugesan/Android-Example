@@ -1,4 +1,4 @@
-package com.velmurugan.hiltandroid.ui
+package com.velmurugan.hiltandroid.ui.home
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

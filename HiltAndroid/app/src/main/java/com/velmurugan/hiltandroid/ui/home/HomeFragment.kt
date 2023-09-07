@@ -1,4 +1,4 @@
-package com.velmurugan.hiltandroid.ui
+package com.velmurugan.hiltandroid.ui.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.velmurugan.hiltandroid.MainViewModel
 import com.velmurugan.hiltandroid.databinding.FragmentHomeBinding
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -14,7 +13,7 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class HomeFragment: Fragment() {
 
-    private val viewModel: MainViewModel by viewModels()
+    private val viewModel: HomeViewModel by viewModels()
 
     lateinit var binding: FragmentHomeBinding
     @Inject

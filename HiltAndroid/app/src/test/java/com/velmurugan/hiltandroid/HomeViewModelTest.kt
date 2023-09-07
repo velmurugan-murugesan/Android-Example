@@ -2,6 +2,7 @@ package com.velmurugan.hiltandroid
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.velmurugan.hiltandroid.data.MainRepositoryImpl
+import com.velmurugan.hiltandroid.ui.home.HomeViewModel
 import junit.framework.TestCase.assertEquals
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -21,10 +22,10 @@ import retrofit2.Response
 
 @OptIn(ExperimentalCoroutinesApi::class)
 @RunWith(JUnit4::class)
-class MainViewModelTest {
+class HomeViewModelTest {
 
     private lateinit var calculator: MainRepositoryImpl
-    private lateinit var viewModel: MainViewModel
+    private lateinit var viewModel: HomeViewModel
 
     private val testDispatcher = UnconfinedTestDispatcher()
 
@@ -42,7 +43,7 @@ class MainViewModelTest {
             runBlocking {
             }
         }*/
-        viewModel = MainViewModel(mainRepository)
+        viewModel = HomeViewModel(mainRepository)
     }
 
     @Test

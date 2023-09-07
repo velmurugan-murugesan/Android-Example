@@ -1,12 +1,10 @@
 package com.velmurugan.hiltandroid.ui
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import androidx.test.filters.MediumTest
 import com.velmurugan.hiltandroid.launchFragmentInHiltContainer
+import com.velmurugan.hiltandroid.ui.home.HomeFragment
 import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest
-import kotlinx.coroutines.ExperimentalCoroutinesApi
-import org.junit.Assert
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
