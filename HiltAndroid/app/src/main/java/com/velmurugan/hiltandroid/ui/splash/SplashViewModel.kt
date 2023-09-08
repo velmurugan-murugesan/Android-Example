@@ -6,6 +6,7 @@ import androidx.lifecycle.viewModelScope
 import com.velmurugan.hiltandroid.Movie
 import com.velmurugan.hiltandroid.data.MainRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -15,6 +16,7 @@ class SplashViewModel @Inject constructor(private val mainRepository: MainReposi
     val progressBarStatus = MutableLiveData<Boolean>()
     fun checkVersion() {
         viewModelScope.launch {
+            delay(2000)
             kotlin.runCatching {
                val response = mainRepository.getVersion()
                 response.body()

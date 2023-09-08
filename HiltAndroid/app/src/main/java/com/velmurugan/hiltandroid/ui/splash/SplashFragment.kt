@@ -15,6 +15,7 @@ import com.velmurugan.hiltandroid.databinding.FragmentSplashBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
+
 class SplashFragment : Fragment() {
 
     private val splashViewModel: SplashViewModel by viewModels()
@@ -33,18 +34,19 @@ class SplashFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         splashViewModel.version.observe(viewLifecycleOwner) {
-            Log.d("version", it.toString())
             findNavController().navigate(R.id.action_splashFragment_to_homeFragment)
         }
 
-        val runnable = Runnable {
-            splashViewModel.checkVersion()
+        binding.welcome.setOnClickListener {
+           // binding.welcome.text = "Hello 2"
+           findNavController().navigate(R.id.action_splashFragment_to_homeFragment)
         }
 
-        Handler(Looper.myLooper()!!).postDelayed(runnable, 2000)
+        splashViewModel.checkVersion()
+
     }
 
 
-
+    // delay -- time unit: ms
 
 }
