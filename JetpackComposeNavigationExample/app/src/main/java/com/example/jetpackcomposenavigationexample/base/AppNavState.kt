@@ -26,7 +26,6 @@ fun AppNavState(
         startDestination = startDestination
     ) {
 
-
         composable(Screens.splash) {
             SplashScreen(navController)
         }
@@ -42,34 +41,6 @@ fun AppNavState(
             DetailsScreen(navController, title)
         }
 
-       /* composable(Screens.step1BasicDetails) {
-            Step1BasicDetailsScreen(navController)
-        }
-
-        composable(
-            step2CreateNewMeasurement,
-            arguments = listOf(navArgument("isEdit") { type = NavType.BoolType } )
-        ) {
-            val isEdit = it.arguments?.getBoolean("isEdit") ?: false
-            Step2CreateNewMeasurementScreen(navController, isEdit, viewModel)
-        }
-
-        composable(Screens.step3MeasurementList) {
-            Step3MeasurementListScreen(navController, viewModel)
-        }
-
-        composable(Screens.step4ReviewMeasurement) {
-            Step4ReviewMeasurementScreen(navController)
-        }*/
-
-        /*
-        composable(Screens.step3ReviewMeasurement) {
-            Step3ReviewMeasurementScreen(navController)
-        }
-
-        composable(Screens.step4AdditionalDetails) {
-            Step4AdditionalDetailsScreen(navController)
-        }*/
     }
 }
 
